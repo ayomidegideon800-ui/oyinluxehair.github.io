@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | OyinLuxeHair</title>
+    <link rel="stylesheet" href="oyinluxehair.css">
+    <script src="https://kit.fontawesome.com/7c58a923d6.js"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="product.html">PRODUCT</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+    <h1>Contact OyinLuxeHair</h1>
+
+    <section id="contact">
+
+        <h2>Get In Touch</h2>
+
+        <p>
+            Have a question or want to order a wig?
+            Contact us through any of the options below.
+        </p>
+
+        <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Reach us for orders or custom requests:</p>
+
+    <ul>
+    <li>
+      <a href="https://www.tiktok.com/@oyinluxehair" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+        <span>oyinluxehair</span>
+      </a>
+    </li>
+
+      <li style="margin-bottom: 10px;">
+        <a href="https://wa.me/2348068323585" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>+2348068323585</span>
+        </a>
+      </li>
+
+      <li style="margin-bottom: 10px;">
+        <a href="mailto:gracebankole15@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          <span>gracebankole15@gmail.com</span>
+        </a>
+      </li>
+      <li style="margin-bottom: 10px;">
+        <a href="tel:07065299315">
+         <i class="fa-solid fa-phone"></i>
+          <span>07065299315</span>
+        </a>
+      </li>
+    </ul>
+    <form id="contactform">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="Your name" required><br><br>
+
+      <label for="email"> Your Email</label><br>
+      <input type="email" id="email" name="email" placeholder="Your email" required><br><br>
+      <input type="hidden" name="time" id="time">
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" placeholder="Write us a message..." rows="4"></textarea><br><br>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formResponse"></p>
+    </section>
+
+</body>
+</html>
