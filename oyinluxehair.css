@@ -232,36 +232,13 @@ a i {
     font-size: 50px;
 }
 
-nav a {
-    display: inline-block;
-    margin: 0 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
 
-}
-
-nav a:hover {
-    color: white;
-}
-
-nav {
-    text-align: center;
-    background-color: rgb(219, 133, 133);
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
 
 header {
     text-align: center;
     background-color: white;
     padding: 30px 20px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
 }
 
 header img {
@@ -430,14 +407,10 @@ header p strong {
 }
 
 @media(max-width: 600px) {
-    nav {
-        gap: 15px;
-        padding: 10px;
-    }
 
     nav a {
         margin: 0;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .services article {
@@ -474,6 +447,17 @@ header p strong {
     .gallery figcaption{
         font-family: 14px;
         line-height: 1.5;
+    }
+    #menuContainer {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+    #menuButton{
+        font-size: 5px;
+    }
+    #navLinks{
+        width: 140px;
     }
 }
 
@@ -620,4 +604,170 @@ header p strong {
     font-weight: bold;
     font-weight: bold;
     flex-shrink: 0;
+}
+#menuContainer {
+    position: absolute;
+    left: 20px;
+    top: 2px;
+    text-align: left;
+}
+
+#menuButton {
+    background: none;
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+    color: #8b2f5b;
+    cursor: pointer;
+    position: relative;
+    z-index: 1100;
+    left: -10px;
+}
+
+#navLinks {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+    padding: 90px 25px 30px;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+#navLinks.show {
+    display: flex;
+    transform: translateX(0);
+}
+#navLinks a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 1px solid #eee;
+    margin: 0;
+    font-weight: bold;
+}
+
+#navLinks a:hover {
+    background-color: #fff0f5;
+}
+
+.drop-menu {
+    display: none;
+    position: static;
+    background-color: #fff5f8;
+    padding:8px 0;
+    margin-top: 5px;
+    border-radius: 6px;
+}
+.drop-menu.show{
+    display: flex;
+    flex-direction: column;
+}
+
+#navLinks .drop-menu a {
+    display: block;
+    padding: 12px 20px 12px 40px;
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+.drop-menu a:hover {
+    background-color: white;
+    color: #8b2f5b;
+    border-radius: 6px;
+}
+
+#productButton {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    margin: 0;
+    color: #8b2f5b;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+.dropdown{
+    position: relative;
+}
+#menuContainer {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 1100;
+}
+#navLinks > a,
+#navLinks .dropdown > #productButton {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    margin: 0;
+    text-align: left;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 16px;
+    color: #8b2f5b;
+    background: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+#navLinks > a:hover,
+#navLinks .dropdown > #productButton:hover {
+    background-color: #fff5f8;
+    color: #6f2348;
+    border-radius: 6px;
+}
+#navLinks .dropdown .drop-menu a {
+    font-size: 10px ;
+}
+#navLinks .drop-menu {
+    border-left: 2px solid #8b2f5b;
+    margin-left: 10px;
+}
+#navLinks > a,
+#navLinks .dropdown {
+    width: 100%;
+}
+#navLinks > a,
+#navLinks .dropdown > #productButton {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    margin: 0;
+    text-align: left;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #8b2f5b;
+    background: none;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.3 ease,color 0.3s ease;
+}
+#navLinks .drop-menu a {
+    font-size: 12px;
+    font-weight: normal;
+}
+#closeButton {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #8b2f5b;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
